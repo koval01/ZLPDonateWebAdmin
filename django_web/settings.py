@@ -2,9 +2,9 @@ from pathlib import Path
 import os.path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-ALLOWED_HOSTS = ["zalupa-srv-adminpanel.herokuapp.com", "*"]
+ALLOWED_HOSTS = ["zalupa-srv-adminpanel.herokuapp.com"]
 SECRET_KEY = os.environ.get("SECRET_KEY_DJANGO")
-DEBUG = True
+DEBUG = False
 SECURE_SSL_REDIRECT = False
 
 INSTALLED_APPS = [
@@ -113,8 +113,8 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
