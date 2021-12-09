@@ -24,7 +24,7 @@ class ServiceDonateStatus(models.Model):
         ('done', 'Оплачено'),
     ]
     nameService = models.CharField('Услуга', max_length=255, default='Випка')
-    namePlayer = models.CharField('Игрок', max_length=255, default='Випка')
+    namePlayer = models.CharField('Игрок', max_length=255, default='lomaka')
     statusPay = models.CharField('Статус', choices=STATUS_, default='wait', max_length=16)
     price = models.IntegerField('Цена в рублях', max_length=255)
 
