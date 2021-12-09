@@ -12,7 +12,7 @@ class ServiceDonate(models.Model):
     price = models.IntegerField('Цена в рублях', max_length=255, default=100)
 
     def __str__(self):
-        return "%s - %s (%d RUB)" % (self.type, self.name, self.price)
+        return "Тип: %s - Игрок: %s (%d RUB)" % (self.type, self.name, self.price)
 
     class Meta:
         verbose_name = 'Донат-услуга'
@@ -30,7 +30,7 @@ class ServiceDonateStatus(models.Model):
     price = models.IntegerField('Сумма в рублях', default=0)
 
     def __str__(self):
-        return "#%d %s - %s (%d RUB) Статус - %s" % (
+        return "#%d Игрок: %s - ID услуги: %s (%d RUB) Статус - %s" % (
             self.id, self.name_player, self.service_id, self.price, self.status_pay
         )
 
