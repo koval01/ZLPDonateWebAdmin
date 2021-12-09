@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='servicedonatestatus',
             name='serviceId',
-            field=models.IntegerField(default=django.utils.timezone.now, max_length=255, verbose_name='ID услуги'),
+            field=models.IntegerField(default=0, max_length=255, verbose_name='ID услуги'),
             preserve_default=False,
         ),
     ]
