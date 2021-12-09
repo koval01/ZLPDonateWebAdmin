@@ -1,12 +1,12 @@
 from setuptools import setup
 
 setup(
-    name='awse_site',
+    name='ZalupaDonateAdmin',
     version='1.0',
-    packages=['awse', 'awse.migrations', 'awse.news_utils', 'awse.search_utils', 'awse_web'],
+    packages=['web_zalupa', 'web_zalupa.migrations', 'django_web'],
     url='https://www.awse.us/',
     license='GNU GENERAL PUBLIC LICENSE',
     author='Koval Yaroslav',
-    author_email='koval@q-writer.com',
-    description='AWSE - Search engine'
+    author_email='yaroslav@koval.page',
+    description='ZalupaAdmin'
 )
