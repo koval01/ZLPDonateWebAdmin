@@ -30,8 +30,8 @@ class ServiceDonateStatus(models.Model):
     price = models.IntegerField('Сумма в рублях', default=0)
 
     def __str__(self):
-        return "%s - %s (%d RUB) Статус - %s" % (
-            self.name_player, self.service_id, self.price, self.status_pay
+        return "#%d %s - %s (%d RUB) Статус - %s" % (
+            self.id, self.name_player, self.service_id, self.price, self.status_pay
         )
 
     class Meta:
