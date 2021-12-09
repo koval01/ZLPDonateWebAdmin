@@ -27,10 +27,11 @@ class ServiceDonateStatus(models.Model):
     name_player = models.CharField('Игрок', max_length=255, default='lomaka')
     status_pay = models.CharField('Статус', choices=STATUS_, default='wait', max_length=16)
     service_id = models.IntegerField('ID услуги')
+    price = models.IntegerField('Сумма в рублях', default=0)
 
     def __str__(self):
         return "%s - %s (%d RUB) Статус - %s" % (
-            self.namePlayer, self.nameService, self.price, self.statusPay
+            self.name_player, self.service_id, self.price, self.status_pay
         )
 
     class Meta:
