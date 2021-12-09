@@ -1,5 +1,6 @@
 django
 django-heroku
+django_compressor
 gunicorn
 django-cors-headers
 whitenoise
