@@ -22,13 +22,14 @@ class ServiceDonate(models.Model):
 class ServiceDonateStatus(models.Model):
     STATUS_ = [
         ('wait', 'Ожидает'),
-        ('done', 'Оплачено'),
+        ('paid', 'Оплачено'),
+        ('done', 'Завершено'),
     ]
     name_player = models.CharField('Игрок', max_length=255, default='lomaka')
     status_pay = models.CharField('Статус', choices=STATUS_, default='wait', max_length=16)
     service_id = models.IntegerField('ID услуги')
     price = models.IntegerField('Сумма в рублях', default=0)
-    user_id_bot = models.IntegerField('ID пользователя в боте', default=0)
+    user_id_bot = models.BigIntegerField('ID пользователя в боте', default=0)
 
     def __str__(self):
         return "#%d Игрок: %s - ID услуги: %s (%d RUB) Статус - %s" % (
