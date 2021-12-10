@@ -8,7 +8,7 @@ class ServiceDonate(models.Model):
     ]
     name = models.CharField('Название', max_length=255, default='Випка')
     type = models.CharField('Тип', choices=SELECT_TYPE, default='prefix', max_length=16)
-    command = models.TextField('Команда', default="/say Hello &player&!")
+    command = models.TextField('Команда', default="/say Hello %_player%_!")
     price = models.IntegerField('Цена в рублях', max_length=255, default=100)
 
     def __str__(self):
