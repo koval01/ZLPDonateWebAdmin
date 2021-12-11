@@ -31,7 +31,7 @@ class ServiceDonateStatus(models.Model):
     service_id = models.IntegerField('ID услуги')
     price = models.IntegerField('Сумма в рублях', default=0)
     user_id_bot = models.BigIntegerField('ID пользователя в боте', default=0)
-    time = models.DateTimeField("Время", auto_now=True)
+    time = models.TimeField("Время", auto_now=True)
 
     def __str__(self):
         return "#%d Игрок: %s - ID услуги: %s (%d RUB) Статус - %s" % (
