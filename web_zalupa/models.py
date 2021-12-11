@@ -12,7 +12,7 @@ class ServiceDonate(models.Model):
     price = models.IntegerField('Цена в рублях', max_length=255, default=100)
 
     def __str__(self):
-        return "Тип: %s - Игрок: %s (%d RUB)" % (self.type, self.name, self.price)
+        return "#%d Тип: %s - Название: \"%s\" (%d RUB)" % (self.id, self.type, self.name, self.price)
 
     class Meta:
         verbose_name = 'Донат-услуга'
