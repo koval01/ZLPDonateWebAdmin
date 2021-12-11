@@ -39,3 +39,15 @@ class ServiceDonateStatus(models.Model):
     class Meta:
         verbose_name = 'Статус оплаты'
         verbose_name_plural = 'Статусы оплаты'
+
+
+class SystemSettings(models.Model):
+    name = models.CharField('Название', max_length=255, default=None)
+    param = models.TextField('Значение', default=None)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Параметр'
+        verbose_name_plural = 'Параметры'
