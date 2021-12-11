@@ -34,8 +34,8 @@ class ServiceDonateStatus(models.Model):
     time = models.DateTimeField("Время", auto_now=True)
 
     def __str__(self):
-        return "#%d Игрок: %s - ID услуги: %s (%d RUB) Статус - %s" % (
-            self.id, self.name_player, self.service_id, self.price, self.status_pay
+        return "#%d Игрок: %s - ID услуги: %s (%d RUB) Статус - %s | %s" % (
+            self.id, self.name_player, self.service_id, self.price, self.status_pay, self.time
         )
 
     class Meta:
