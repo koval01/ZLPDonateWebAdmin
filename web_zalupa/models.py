@@ -5,8 +5,9 @@ class ServiceDonate(models.Model):
     SELECT_TYPE = [
         ('prefix', 'Префикс'),
         ('rank', 'Привилегия'),
+        ('other', 'Другое'),
     ]
-    name = models.CharField('Название', max_length=255, default='Випка')
+    name = models.CharField('Название', max_length=255, default='Строитель')
     type = models.CharField('Тип', choices=SELECT_TYPE, default='prefix', max_length=16)
     command = models.TextField('Команда', default="/say Hello %_player%_!")
     price = models.IntegerField('Цена в рублях', max_length=255, default=100)
