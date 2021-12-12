@@ -2,7 +2,7 @@ from pathlib import Path
 import os.path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-ALLOWED_HOSTS = ["zalupa.koval.page"]
+ALLOWED_HOSTS = ["zalupa-srv-adminpanel.herokuapp.com"]
 SECRET_KEY = os.environ.get("SECRET_KEY_DJANGO")
 DEBUG = False
 SECURE_SSL_REDIRECT = False
