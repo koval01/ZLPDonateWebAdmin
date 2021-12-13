@@ -53,3 +53,18 @@ class SystemSettings(models.Model):
     class Meta:
         verbose_name = 'Параметр'
         verbose_name_plural = 'Параметры'
+
+
+class BanInBot(models.Model):
+    user_id = models.IntegerField('ID пользователя', max_length=255, default=None)
+    comment = models.IntegerField(
+        'Комментарий (Его получит пользователь при попытке воспользоваться ботом)',
+        max_length=255, default="Команда Zalupa решила что тебя нужно заблокировать."
+    )
+
+    def __str__(self):
+        return self.user_id
+
+    class Meta:
+        verbose_name = 'Бан'
+        verbose_name_plural = 'Бан-лист'
