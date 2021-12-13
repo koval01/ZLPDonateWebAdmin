@@ -56,7 +56,7 @@ class SystemSettings(models.Model):
 
 
 class BanInBot(models.Model):
-    user_id = models.IntegerField('ID пользователя', unique=True, max_length=255, default=None)
+    user_id = models.BigIntegerField('ID пользователя', unique=True, max_length=255, default=None)
     comment = models.TextField(
         'Комментарий (Его получит пользователь при попытке воспользоваться ботом)',
         default="Команда Zalupa решила что тебя нужно заблокировать."
