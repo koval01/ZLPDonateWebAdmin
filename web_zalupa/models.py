@@ -32,8 +32,8 @@ class ServiceDonateStatus(models.Model):
     price = models.IntegerField('Сумма в рублях', default=0)
     user_id_bot = models.BigIntegerField('ID пользователя в боте', default=0)
     time = models.DateTimeField("Время", auto_now=True)
-    success_code_pay = models.CharField("Код успеха", default=0, max_length=64)
-    bill_id = models.CharField("Bill ID", default=0, max_length=64)
+    success_code_pay = models.CharField("Код успеха", default=0, max_length=48)
+    bill_id = models.CharField("Bill ID", default=0, max_length=48)
 
     def __str__(self):
         return "#%d Игрок: %s - ID услуги: %s (%d RUB) Статус - %s | %s" % (
