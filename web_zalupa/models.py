@@ -32,6 +32,7 @@ class ServiceDonateStatus(models.Model):
     price = models.IntegerField('Сумма в рублях', default=0)
     user_id_bot = models.BigIntegerField('ID пользователя в боте', default=0)
     time = models.DateTimeField("Время", auto_now=True)
+    bill_id = models.CharField("Номер платежа QIWI (Bill ID)", default=0, unique=True, max_length=64)
 
     def __str__(self):
         return "#%d Игрок: %s - ID услуги: %s (%d RUB) Статус - %s | %s" % (
